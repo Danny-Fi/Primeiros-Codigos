@@ -1,0 +1,10 @@
+Autor DannyFi Data: 15/06/2024
+
+a = float(input('Qual valor de a: '))
+b = float(input('Qual valor de b: '))
+c = float(input('Qual valor de c: '))
+delta = (b**2-(4*a*c))
+x1 = (-b+(delta**(1/2)))/(2*a)
+x2 = (-b-(delta**(1/2)))/(2*a)
+print('O valor de Δ: é {:.3f}'.format(delta))
+print('Os valores de X são {:.3f} e {:.3f} '.format(x1, x2))
