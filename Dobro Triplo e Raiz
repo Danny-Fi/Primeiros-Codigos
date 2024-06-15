@@ -1,0 +1,7 @@
+Autor: Danny_Fi Data: 15/06/2024
+n1 = int(input('Digite um Valor: '))
+n2 = (n1*2)
+n3 = (n1*3)
+n4 = (n1**(1/2))
+print('O número {} possui: '.format(n1))
+print('Seu dobro: {}\nSeu triplo: {} \nSua raiz quadrada: {:.2f} '.format(n2, n3, n4))
