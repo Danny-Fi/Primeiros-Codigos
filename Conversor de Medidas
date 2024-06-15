@@ -1,0 +1,7 @@
+Autor: Danny_Fi Data: 15/06/2024
+print('Calculadora de Medidas: ')
+medida = float(input('Digite o Valor em Metros: '))
+cm = (medida*100)
+mm = (medida*1000)
+km = (medida/1000)
+print('A sua Medida {}m, em: \n {}Km \n {:.0f}cm \n {:.0f}mm'.format(medida,km,cm,mm))
