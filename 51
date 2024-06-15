@@ -1,0 +1,7 @@
+Autor DannyFi Data: 15/06/2024
+
+n1 = float(input('Valor que possui?  R$: '))
+n2 = (n1/16)
+n3 = (n1%16)
+print('Você poderá comprar {:.0f} unidades de 51!'.format(n2))
+print('E sobrará R${}! '.format(n3))
