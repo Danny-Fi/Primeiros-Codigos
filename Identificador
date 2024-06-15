@@ -1,0 +1,11 @@
+Autor: Danny_Fi Data: 15/06/2024
+n1 = input('Digite Algo: ')
+print('Classe:', (type(n1)))
+print('É Alphanúmerico?: '), print(n1.isalnum())
+print('É Númerico?: '), print(n1.isnumeric())
+print('É Alphabetico?: '), print(n1.isalpha())
+print('É Maiúscula?: '), print(n1.isupper())
+print('É Minúscula?: '), print(n1.islower())
+print('É um espaço?: '), print(n1.isspace())
+print('É um Ascii?: '), print(n1.isascii())
+print('É Decimal?: '), print(n1.isdecimal())
