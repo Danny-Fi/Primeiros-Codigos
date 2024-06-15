@@ -1,0 +1,6 @@
+Autor: Danny_Fi Data: 15/06/2024
+n1 = int(input('Digite um Valor Inteiro: '))
+n2 = (n1+1)
+n3 = (n1-1) 
+print(f'Considerando o número {n1}: ')
+print(f'Sendo seu antecessor {n3} e seu sucessor {n2}! ')
