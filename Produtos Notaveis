@@ -1,0 +1,7 @@
+Autor DannyFi Data: 15/06/2024
+
+print('Calculadora dos Produtos Notáveis: (x+y)² ')
+x = int(input('Digite o primeiro Número: '))
+y = int(input('Digite o segundo número: '))
+z = (x**2) + 2*x*y + (y**2)
+print('Os produtos notáveis de ({} + {}) = {}'.format(x, y, z))
