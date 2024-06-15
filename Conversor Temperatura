@@ -1,0 +1,5 @@
+Autor: DannyFi  Data:  15/06/2024
+
+n1 = float(input('Qual Sua Temperatura em °C: '))
+temp = (n1*(9/5))+32
+print('A sua temperatura de {} °C será em farenheit {:.1f} °F'.format(n1, temp))
