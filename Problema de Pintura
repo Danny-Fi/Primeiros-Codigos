@@ -1,0 +1,5 @@
+Autor: DannyFi Data 15/06/2024
+n1 = float(input('Quanto de altura sua parede tem? '))
+n2 = float(input('Quanto de largura sua parede tem? '))
+a = (n1*n2)
+print('Sua parede possui {:.2f}m² de área, logo será necessario {:.2f} litros de tinta para se pintar a parede!'.format(a,(a/2)))
