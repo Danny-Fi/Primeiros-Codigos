@@ -1,0 +1,6 @@
+Autor: DannyFi Data 15/06/2024
+
+dias = int(input('Quantos dias o carro foi alugado? '))
+km = float(input('Quantos Km você foram rodados? '))
+valor = (dias*60)+(km*15/100)
+print('O aluguel do carro custará {:.2f} R$! '.format(valor))
