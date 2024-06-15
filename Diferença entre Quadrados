@@ -1,0 +1,7 @@
+Autor Danny Data:15/06/2024
+
+print('Diferença entre quadrados: x²-y² ')
+x = int(input('Digite o Primeiro Quadrado: '))
+y = int(input('Digite o Segundo Quadrado: '))
+z = (x+y)*(x-y)
+print('A diferença entre os quadrados ({}²-{}²) é {} '.format(x, y, z))
