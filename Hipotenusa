@@ -1,0 +1,7 @@
+Autor: DannyFi Data: 15/06/2024
+
+co = float(input('Digite o cateto oposto: '))
+ca = float(input('Digite o cateto adjacente: '))
+hi = (co**2)+(ca**2)
+rhi = hi**(1/2)
+print('O valor da hipotenusa será de {:.1f}! '.format(rhi))
