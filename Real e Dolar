@@ -1,0 +1,4 @@
+Autor: Danny_Fi Data: 15/06/2024
+real = float(input('Quanto Dinheiro você possui em R$: '))
+dolar = (real/5.35)
+print('Com o Valor de {:.2f} R$ você poderá comprar {:.2f} U$ '.format(real, dolar))
