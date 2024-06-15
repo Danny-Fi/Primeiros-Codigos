@@ -1,0 +1,3 @@
+Autor : Danny_Fi Data 15/06/2024
+nome = input(str('Qual é seu nome ?: '))
+print('Olá {} seja muito bem-vindo!'.format(nome))
