@@ -1,0 +1,10 @@
+Autor DannyFi Data: 15/06/2024
+
+a = int(input('Digite a base : '))
+b = int(input('Digite a outra base: '))
+c = float(input('Digite o expoente do primeiro: '))
+d = float(input('Digite o expoente do segundo: '))
+f = a**(c)
+g = b**(d)
+resultado = (f*g)
+print('O produto entre {}^{:.0f} e {}^{:.0f} é {:.0f}'.format(a, c, b, c, resultado))
