@@ -1,0 +1,11 @@
+Autor: DannyFi Data: 15/06/2024 
+
+import math
+ang = float(input('Digite seu ângulo: '))
+sin = math.sin(math.radians(ang))
+cos = math.cos(math.radians(ang))
+tan = math.tan(math.radians(ang))
+print(f'Do ângulo desejado {ang}°')
+print('O seno é {:.2f}! '.format(sin))
+print('O cosseno é {:.2f}!'.format(cos))
+print('A tangente é {:.2f}!'.format(tan))
