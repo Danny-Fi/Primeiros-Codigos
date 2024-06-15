@@ -1,0 +1,6 @@
+Autor: Danny_Fi Data: 15/06/2024
+print('Calculadora Média Aritmética: ')
+n1 = float(input('Primeiro Número: ? '))
+n2 = float(input('Segundo Número: ? '))
+m = (n1+n2)/2
+print('A sua média é {:.2f} !'.format(m))
