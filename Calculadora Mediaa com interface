@@ -1,0 +1,38 @@
+Autor DannyFi Data 16/06/2024
+  
+  import PySimpleGUI as sg
+
+# layout da interface
+layout = [
+    [sg.Text('Digite o primeiro número:'),
+     sg.InputText(key='n1', size=(5, 1))],
+    [sg.Text('Digite o segundo número:'), sg.InputText(key='n2', size=(5, 1))],
+    [sg.Button('Calcular')],
+    [sg.Text('', size=(20, 1), key='resultado')],
+]
+
+# janela da interface
+window = sg.Window('Calculadora de Média', layout)
+
+# Loop principal para capturar eventos
+while True:
+    event, values = window.read()
+
+    # Se o usuário fechar a janela
+    if event == sg.WIN_CLOSED:
+        break
+
+    # Se o botão "Calcular" for clicado
+    if event == 'Calcular':
+        try:
+            n1 = float(values['n1'])
+            n2 = float(values['n2'])
+            resultado = (n1 + n2)/2
+            window['resultado'].update(f'Resultado: {resultado:.1f}')
+        except ValueError:
+            window['resultado'].update('Entrada inválida')
+
+# Fecha a janela ao sair do loop
+window.close()
+
+  OBS: Não sei usar interface direito ainda logo a segunda caixa ficou meio torta 
