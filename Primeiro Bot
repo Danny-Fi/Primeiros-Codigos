@@ -1,0 +1,32 @@
+Autor DannyFi Data: 19/06/2024
+
+import time
+
+
+def process_command(command):
+    command = command.lower()
+
+    if command in ['olá', 'ola', 'ola', 'ola', 'olá']:
+        return 'Olá! Como posso lhe ajudar hoje?'
+    elif command in ['tempo', 'tempo', 'tempo']:
+        return f'As horas atuais são {time.strftime("%H:%M:%S")}.'
+    elif command in ['data', 'data', 'data']:
+        return f'Hoje é {time.strftime("%d/%m/%Y")}.'
+    elif command in ['sair', 'sair', 'sair']:
+        return 'Adeus, até mais!'
+    else:
+        return 'Desculpe, não entendi. Tente novamente.'
+
+
+def run_bot():
+    print('Bot: Olá, eu sou um bot simples. Digite SAIR para parar.')
+    while True:
+        user_input = input('Você: ')
+        resposta = process_command(user_input)
+        print(f'Bot: {resposta}')
+        if user_input.lower() in ['sair', 'sair', 'sair']:
+            break
+
+
+if __name__ == '__main__':
+    run_bot()
