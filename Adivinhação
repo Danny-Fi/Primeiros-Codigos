@@ -36,10 +36,10 @@ def guess_the_number():
     while True:
         event, values = window.read()
 
-        if event == sg.WINDOW_CLOSED or event in ['Sair', 'sair', 'SAIR']:
+        if event == sg.WINDOW_CLOSED or event in ['Sair']:
             break
 
-        if event in ['Palpite', 'PALPITE', 'palpite']:
+        if event in ['Palpite']:
             try:
                 guess = int(values['-INPUT-'])
                 attempts += 1
