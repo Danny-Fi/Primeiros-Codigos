@@ -14,7 +14,7 @@ layout = [
 # janela da interface
 window = sg.Window('Calculadora de Média', layout)
 
-# Loop principal para capturar eventos
+# Loop principal
 while True:
     event, values = window.read()
 
