@@ -1,0 +1,69 @@
+Autor DannyFi Data:25/06/2024
+Primeiros testes de Jogos com auxilio de I.A
+
+# Bibliotecas necessárias
+
+#Randomizador
+import random
+#Interface Gráfica
+import PySimpleGUI as sg
+
+# Função para gerar um número aleatório
+def generate_random_number(min_num, max_num):
+    return random.randint(min_num, max_num)
+
+# Função principal do jogo
+def guess_the_number():
+    min_num = 1
+    max_num = 100
+    random_number = generate_random_number(min_num, max_num)
+    attempts = 0
+
+    # Layout da interface gráfica
+    layout = [
+        [sg.Text("Será que consegue adivinhar o número?")],
+        [sg.Text(f'Tente adivinhar o número entre {min_num} e {max_num}')],
+        [sg.Input(key='-INPUT-')],
+        [sg.Button('Palpite'), sg.Button('Sair')],
+        [sg.Text(size=(40, 1), key='-OUTPUT-')],
+        [sg.Button('Jogar Novamente', visible=False, key='-PLAYAGAIN-')]
+    ]
+
+    # Criar a janela
+    window = sg.Window('Jogo da Adivinhação', layout)
+
+    # Loop dos eventos
+    while True:
+        event, values = window.read()
+
+        if event == sg.WINDOW_CLOSED or event in ['Sair', 'sair', 'SAIR']:
+            break
+
+        if event in ['Palpite', 'PALPITE', 'palpite']:
+            try:
+                guess = int(values['-INPUT-'])
+                attempts += 1
+
+                if guess < random_number:
+                    window['-OUTPUT-'].update('Muito baixo, tente outro')
+                elif guess > random_number:
+                    window['-OUTPUT-'].update('Muito alta, tente outro')
+                else:
+                    window['-OUTPUT-'].update(f'Parabéns! Você adivinhou o número {random_number} em {attempts} tentativas')
+                    window['-PLAYAGAIN-'].update(visible=True)
+                    window['Palpite'].update(disabled=True)
+            except ValueError:
+                window['-OUTPUT-'].update('Digite um número válido.')
+
+        if event == '-PLAYAGAIN-':
+            random_number = generate_random_number(min_num, max_num)
+            attempts = 0
+            window['-OUTPUT-'].update('')
+            window['-PLAYAGAIN-'].update(visible=False)
+            window['Palpite'].update(disabled=False)
+
+    window.close()
+
+# Executar o jogo
+if __name__ == "__main__":
+    guess_the_number()
